@@ -1,0 +1,25 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Pull') { 
+            steps {
+                git 'https://github.com/rajatpzade/studentapp.ui.git'
+            }
+        }
+        stage('Build') { 
+            steps {
+                echo 'successfully build'
+            }
+        }
+        stage('Test') { 
+            steps {
+               echo 'successfully test' 
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                echo 'successfully deploy' 
+            }
+        }
+    }
+}
