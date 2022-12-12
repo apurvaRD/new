@@ -1,0 +1,25 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Pull') { 
+            steps {
+                git 'https://github.com/apurvaRD/new.git' 
+            }
+        }
+        stage('Build') { 
+            steps {
+              echo 'build ok'
+            }
+        }
+        stage('Test') { 
+            steps {
+                echo 'Test ok'
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                echo 'Deploy ok'
+            }
+        }
+    }
+}
